@@ -44,6 +44,8 @@ $|V|$, $|E|$, and $d$ and will account for the `delete-min` and
 `insert` operations separately.
 
 
+
+
 **put in answers.md**
 
 .  
@@ -96,7 +98,7 @@ Compute $\mathit{APSP}(i, j, k)$ for all $i, j, k$.
 
 
 b) Do you see a relationship between $\mathit{APSP}(i, j, 1)$ and
-$\mathit{APS}(i, j, 2)$? Can you write $\mathit{APS}(i, j, 2)$ in
+$\mathit{APSP}(i, j, 2)$? Can you write $\mathit{APSP}(i, j, 2)$ in
 terms of $\mathit{APS}(i, j, 0)$ and $\mathit{APS}(i, j, 1)$ only?
 
 
