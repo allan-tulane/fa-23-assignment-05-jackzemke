@@ -62,7 +62,7 @@
         - $APSP(i, j, 2) = APSP(i, j, 1)$
 
 - **2c.**
-    -   $\begin{equation}APSP(i,j,k) = min \begin{cases} APSP(i,j,k-1) \\ APSP(i,k,k-1)+APSP(k,j,k-1) \end{cases}\end{equation}$
+    - $APSP(i,j,k) = min \begin{cases} APSP(i,j,k-1) \\ APSP(i,k,k-1)+APSP(k,j,k-1) \end{cases}$
 
 - **2d.**
     - Naively, we would consider $APSP(i,j,k)$ for all $i,j \in |V|$ and $k \in |E|$. This would yield $|V|^2|E|$ subproblems and a work of $O(|V|^2|E|).$
