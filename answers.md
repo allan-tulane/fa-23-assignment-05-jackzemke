@@ -62,14 +62,14 @@
         - $APSP(i, j, 2) = APSP(i, j, 1)$
 
 - **2c.**
-    -   $APSP(i,j,k) = min \begin{cases} APSP(i,j,k-1) \\ APSP(i,k,k-1)+APSP(k,j,k-1) \end{cases}$
+    -   $\begin{equation}APSP(i,j,k) = min \begin{cases} APSP(i,j,k-1) \\ APSP(i,k,k-1)+APSP(k,j,k-1) \end{cases}\end{equation}$
 
 - **2d.**
     - Naively, we would consider $APSP(i,j,k)$ for all $i,j \in |V|$ and $k \in |E|$. This would yield $|V|^2|E|$ subproblems and a work of $O(|V|^2|E|).$
         - However, we can utilize memoization assuming this problem is always conducted on an undirected graph. We can observe that all $APSP(i,j,k) = APSP(j,i,k)$. As such, we only have to consider $|V||E|$ cases instead of the naive $|V|^2|E|$ cases. Thus, our algorithm has a work of $O(|V||E|)$.
 
 - **2e.**
-    - Johnson's algorithm has a work of $O(|V|*|E| \log |E|)$, and our algorithm has a work of $O(|V|*|E|)$. Our algorithm is more efficient when $|E| \lt |E| \log |E|$. This is the case when $|E| \gt 10$. Therefore, the ideal choice of algorithm depends on the number of edges, with the threshold of decision at $|E| = 10$. 
+    - Johnson's algorithm has a work of $O(|V| \cdot |E| \log |E|)$, and our algorithm has a work of $O(|V| \cdot |E|)$. Our algorithm is more efficient when $|E| \lt |E| \log |E|$. This is the case when $|E| \gt 10$. Therefore, the ideal choice of algorithm depends on the number of edges, with the threshold of decision at $|E| = 10$. 
 
 
 
